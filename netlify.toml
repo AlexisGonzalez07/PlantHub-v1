@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build" # Adjust this to your build command
+  publish = "/" # Adjust this to your build output directory
+
+[context.production.environment]
+  NODE_ENV = "production"
+  CI=""
+
+[context.split-test.environment]
+  NODE_ENV = "split-test"
+
+  [build.post]
+  command = "npm run after-netlify-build" # Adjust this to your post-build script
