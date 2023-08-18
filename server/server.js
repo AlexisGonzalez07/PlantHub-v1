@@ -5,14 +5,14 @@ const routes = require('./routes');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
-
+const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
 // Serve up static assets
 app.use(express.static(path.join(__dirname, '../client/build')));
-
+app.use(cors());
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
