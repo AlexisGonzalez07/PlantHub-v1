@@ -9,5 +9,5 @@
 [context.split-test.environment]
   NODE_ENV = "split-test"
 
-  [build.post]
+[build.post]
   command = "npm run after-netlify-build" # Adjust this to your post-build script
