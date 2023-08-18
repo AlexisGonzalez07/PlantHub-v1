@@ -26,8 +26,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PLANT = gql`
-  mutation addPlant($name: String!, $nickname: String, $plantType: String!, $plantSize: String!, $waterNeeded: Int!) {
-    addPlant(name: $name, nickname: $nickname, plantType: $plantType, plantSize: $plantSize, waterNeeded: $waterNeeded) {
+  mutation addPlant($name: String!, $nickname: String, $plantType: String!, $plantSize: String!, $waterNeeded: Int!, $hasImage: Boolean!) {
+    addPlant(name: $name, nickname: $nickname, plantType: $plantType, plantSize: $plantSize, waterNeeded: $waterNeeded, hasImage: $hasImage) {
       _id
       name
       nickname

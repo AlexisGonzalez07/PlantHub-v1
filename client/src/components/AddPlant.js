@@ -82,7 +82,8 @@ export default function AddPlantForm({ handlePlantModal, handleLoginModal }) {
 
     try {
       const { data } = await addPlant({
-        variables: { ...plantState },
+        variables: { ...plantState,
+        hasImage: false },
       });
 
       // Auth.login(data.addUser.token);

@@ -24,7 +24,7 @@ import PlantFacts from './pages/PlantFacts'
 
 
 const httpLink = createHttpLink({
-    uri: 'https://plant-hub-v1-server.vercel.app/graphql',
+    uri: 'https://plant-hub-refactor.vercel.app/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
